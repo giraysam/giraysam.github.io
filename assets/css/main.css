@@ -56,8 +56,11 @@ code {
 	margin-top: -13px;
 }
 .middle-panel h4 {
-	padding-top: 20px;
-	color: #ff828e;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	color: #b58900;
+	border-left: 5px solid;
 }
 .right-panel {
     background-color: #002b36;
@@ -106,7 +109,7 @@ code {
     margin: 5px 0 0 0;
 }
 #slide-nav .navbar-toggle.slide-active .icon-bar {
-    background: orange;
+    background: #b58900;
 }
 .navbar-header {
     position: relative;
@@ -115,13 +118,13 @@ code {
     position: relative;
 }
 .navbar-inverse .navbar-brand {
-    color: #868fb3;
+    color: #b58900;
 }
 .navbar-inverse {
     background: #000000;
 }
 .navbar-inverse .navbar-nav > li > a {
-    color: #868fb3;
+    color: #b58900;
 }
 
 @media (min-width: 981px) {
@@ -142,14 +145,14 @@ code {
 	}
 	#slide-nav .navbar.slide-active {
 	    position: absolute;
-	    width: 40%;
+	    width: 60%;
 	    top: -1px;
 	    z-index: 1000;
 	}
 	#slide-nav #slidemenu {
 	    background: #f7f7f7;
 	    left: -100%;
-	    width: 40%;
+	    width: 60%;
 	    min-width: 0;
 	    position: absolute;
 	    padding-left: 0;
@@ -164,7 +167,6 @@ code {
 	}
 	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
 	    min-width: 0;
-	    width: 40%;
 	    white-space: normal;
 	}
 	#slide-nav {
@@ -178,8 +180,8 @@ code {
 	    top: 0;
 	    height: 100%;
       	bottom:0;
-	    width: 40%;
-	    left: -40%;
+	    width: 60%;
+	    left: -60%;
 	    background: #f7f7f7;
 	}
 	#navbar-height-col.inverse {

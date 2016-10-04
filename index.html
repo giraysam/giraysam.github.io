@@ -37,7 +37,12 @@
                 <div id="slidemenu">
                     <ul class="nav navbar-nav">
                         <li class="active"><a class="link" href="#about">About</a></li>
-                        <li><a class="link" href="#projects">Projects</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="link" href="#boomerang-cache">Boomerang Cache</a></li>
+                            </ul>
+                        </li>
                         <li><a class="link" href="#contact">Contact</a></li>
                     </ul>
                 </div> <!-- slidemenu -->
@@ -68,26 +73,40 @@
                 </div>
             </div> <!-- row -->
 
-            <div id="projects" class="row">
+            <hr />
+
+            <div class="row">
                 <div class="middle-panel col-md-6">
                     <h2>Projects</h2>
-                    <h4>Boomerang Cache</h4>
+                    <!-- Boomerang Cache Start -->
+                    <h4 id="boomerang-cache" >Boomerang Cache</h4>
                     <p>
-                        BoomerangCache is a client side caching library based on localStorage and sessionStorage.
+                        BoomerangCache is a client side caching library based on localStorage and sessionStorage.<br />
+                        <a target="_blank" href="https://www.npmjs.org/package/boomerang-cache">
+                            <img src="https://img.shields.io/npm/v/boomerang-cache.svg?style=flat-square" alt="npm version" />
+                        </a>
+                        <a target="_blank" href="https://travis-ci.org/giraysam/boomerang-cache">
+                            <img src="https://travis-ci.org/giraysam/boomerang-cache.svg?branch=master" alt="travis" />
+                        </a>
                     </p>
                     <p>
-                        <b>Source Code:</b>
-                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache'>https://github.com/giraysam/boomerang-cache</a><br />
+                        <b>Download:</b>
+                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache/blob/master/src/boomerang-cache.js'>Source</a>,
+                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache/blob/master/dist/boomerang-cache.min-1.0.4.js'>Minified</a>
+                        <br />
+                        <b>Follow the project on</b>
+                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache'>Github project page</a> or 
+                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache/issues'>report a bug</a><br />
 
-                        <b>Documentation:</b>
-                        <a target="_blank" href='https://giraysam.github.io/boomerang-cache/'>https://giraysam.github.io/boomerang-cache/</a><br />
+                        <b>View</b> <a target="_blank" href='https://giraysam.github.io/boomerang-cache/'>Full Documentation</a><br />
                         <b>Keywords:</b> Javascript, localStorage, sessionStorage
                     </p>
                 </div>
                 <div class="right-panel col-md-6">
                     <pre>
                         <code class="js">
-/** Boomerang Cache **/
+// Usage
+
 var boomerang = BoomerangCache.create("bucket_1");
 var seconds = 3;
 boomerang.set('key', 'Hello World', seconds);
@@ -95,7 +114,11 @@ boomerang.get('key', 'Hello World');
                         </code>
                     </pre>
                 </div>
+                <!-- Boomerang Cache End -->
+
             </div> <!-- row -->
+
+            <hr />
 
             <div id="contact" class="row">
                 <div class="middle-panel col-md-6">
@@ -129,13 +152,13 @@ boomerang.get('key', 'Hello World');
             var toggler = '.navbar-toggle';
             var pagewrapper = '#page-content';
             var navigationwrapper = '.navbar-header';
-            var slidewidth = '40%';
+            var slidewidth = '60%';
             var menuneg = '-100%';
-            var slideneg = '-40%';
+            var slideneg = '-60%';
 
             $("#slide-nav").on("click", toggler, function (e) {
 
-                $("html, body").animate({scrollTop:'0'}, 500);
+                $("html, body").animate({scrollTop:'0'}, 200);
                 window.location.hash = '';
 
                 var selected = $(this).hasClass('slide-active');
