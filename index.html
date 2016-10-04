@@ -41,6 +41,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a class="link" href="#boomerang-cache">Boomerang Cache</a></li>
+                                <li><a class="link" href="#viiny-dragger">Viiny Dragger</a></li>
                             </ul>
                         </li>
                         <li><a class="link" href="#contact">Contact</a></li>
@@ -75,13 +76,14 @@
 
             <hr />
 
+            <!-- Boomerang Cache Start -->
             <div class="row">
                 <div class="middle-panel col-md-6">
                     <h2>Projects</h2>
-                    <!-- Boomerang Cache Start -->
+                    
                     <h4 id="boomerang-cache" >Boomerang Cache</h4>
                     <p>
-                        BoomerangCache is a client side caching library based on localStorage and sessionStorage.<br />
+                        Boomerang Cache is a client side caching library based on localStorage and sessionStorage.<br />
                         <a target="_blank" href="https://www.npmjs.org/package/boomerang-cache">
                             <img src="https://img.shields.io/npm/v/boomerang-cache.svg?style=flat-square" alt="npm version" />
                         </a>
@@ -106,7 +108,6 @@
                     <pre>
                         <code class="js">
 // Usage
-
 var boomerang = BoomerangCache.create("bucket_1");
 var seconds = 3;
 boomerang.set('key', 'Hello World', seconds);
@@ -114,12 +115,54 @@ boomerang.get('key', 'Hello World');
                         </code>
                     </pre>
                 </div>
-                <!-- Boomerang Cache End -->
-
             </div> <!-- row -->
+            <!-- Boomerang Cache End -->
+
+            <!-- Viiny Dragger Start -->
+            <div class="row">
+                <div class="middle-panel col-md-6">
+                    <h4 id="viiny-dragger" >Viiny Dragger</h4>
+                    <p>
+                        Viiny Dragger is a drag and drop plugin for javascript.
+                    </p>
+                    <p>
+                        <b>Download:</b>
+                        <a target="_blank" href='https://github.com/giraysam/viiny-dragger/blob/master/src/index.js'>Source</a>,
+                        <a target="_blank" href='https://github.com/giraysam/viiny-dragger/blob/master/dist/viiny-dragger.min.js'>Minified</a>
+                        <br />
+                        <b>Follow the project on</b>
+                        <a target="_blank" href='https://github.com/giraysam/viiny-dragger'>Github project page</a> or 
+                        <a target="_blank" href='https://github.com/giraysam/viiny-dragger/issues'>report a bug</a><br />
+
+                        <b>View</b> <a target="_blank" href='http://giraysam.github.io/viiny-dragger'>Full Documentation</a><br />
+                        <b>Keywords:</b> Javascript, Drag and Drop
+                    </p>
+                </div>
+                <div class="right-panel col-md-6">
+                    <pre>
+                        <code class="js">
+// Dragging
+var obj = document.getElementById('drag-1');
+viiny.dragger(obj);
+
+// Snapping
+var obj = document.getElementById('drag-1');
+viiny.dragger(obj, {
+    snapX: 50,
+    snapY: 50
+});
+
+// it has Axis, Callbacks, Restriction features...
+
+                        </code>
+                    </pre>
+                </div>
+            </div> <!-- row -->
+            <!-- Viiny Dragger End -->
 
             <hr />
 
+            <!-- Contact -->
             <div id="contact" class="row">
                 <div class="middle-panel col-md-6">
                     <h2>Contact</h2>
