@@ -9,16 +9,26 @@ body.slide-active {
     position: relative;
     padding-top: 70px;
     left: 0;
+    overflow-x: hidden;
 }
 #page-content.slide-active {
     padding-top: 0
+}
+pre {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+code {
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 .middle-panel {
     color: #3c4151;
     font-weight: 400;
     font-size: 15px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
     border: 4px solid #ffffff;
 }
 .middle-panel:after, .middle-panel:before {
@@ -45,17 +55,18 @@ body.slide-active {
 	margin-top: -13px;
 }
 .right-panel {
-    background-color: #2b2f3e;
+    background-color: #002b36;
     color: #959cad;
     font-size: 16px;
     font-weight: 300;
-    padding-top: 35px;
-    padding-bottom: 35px;
     z-index: 100;
     position: relative;
 }
+.right-panel .panel-content {
+    padding-bottom: 25px;
+}
 .right-panel h3 {
-    color: #5d6577;
+    color: #002b36;
     font-size: 23px;
     font-weight: 400;
     padding: 0;
@@ -67,16 +78,9 @@ body.slide-active {
     right: 0;
     top: 0;
     display: none;
-    background-color: #2b2f3e;
+    background-color: #002b36;
     z-index: 1;
 }
-@media (min-width: 981px) {
-    .right-panel-background {
-        display: block;
-    }
-}
-
-/* put toggle bars on the left :: not using button */
 #slide-nav .navbar-toggle {
     cursor: pointer;
     position: relative;
@@ -90,7 +94,6 @@ body.slide-active {
     z-index: 500;
     background: transparent;
 }
-/* icon bar prettyup - optional */
 #slide-nav .navbar-toggle > .icon-bar {
     width: 100%;
     display: block;
@@ -103,7 +106,6 @@ body.slide-active {
 .navbar-header {
     position: relative;
 }
-/* un fix the navbar when active so that all the menu items are accessible */
 .navbar.navbar-fixed-top.slide-active {
     position: relative;
 }
@@ -116,7 +118,13 @@ body.slide-active {
 .navbar-inverse .navbar-nav > li > a {
     color: #868fb3;
 }
-/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+
+@media (min-width: 981px) {
+    .right-panel-background {
+        display: block;
+    }
+}
+
 @media (max-width:767px) { 
 	#slide-nav .container {
 	    margin: 0!important;
@@ -158,9 +166,8 @@ body.slide-active {
 	    border-top: 0
 	}
 	#slide-nav.navbar-inverse #slidemenu {
-	    background: #333
+	    background: #001f27
 	}
-	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
 	#navbar-height-col {
 	    position: fixed;
 	    top: 0;
@@ -171,7 +178,7 @@ body.slide-active {
 	    background: #f7f7f7;
 	}
 	#navbar-height-col.inverse {
-	    background: #333;
+	    background: #001f27;
 	    z-index: 1;
 	    border: 0;
 	}
@@ -180,7 +187,6 @@ body.slide-active {
 	    margin: 8px 0;
 	    text-align: center;
 	    overflow: hidden;
-	    /*fast clearfixer*/
 	}
 	#slide-nav .navbar-form .form-control {
 	    text-align: center

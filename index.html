@@ -3,22 +3,23 @@
     <head>
         <title>Web Developer - Giray SAM</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         
         <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" />
         
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-dark.min.css">
 
         <link rel="stylesheet" href="assets/css/main.css" />
         
         <!-- Latest compiled and minified JavaScript -->
+        <script src="assets/js/highlight.pack.js"></script>
         <script src="http://code.jquery.com/jquery-2.2.4.js" type="text/javascript"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="assets/js/highlight.pack.js"></script>
         
     </head>
     <body>
@@ -43,42 +44,43 @@
             </div>
             </div>
         <div id="page-content" class="container-fluid">
-            <div class="row">
+            <div id="about" class="row">
                 <div class="middle-panel col-md-6">
                     <h2>About Me</h2>
                     <p>
                         I'm living and working in Turkey / Izmir. I'm happily married to a wonderful woman and we have a wonderful child.
                     </p>
-                    <p>Everywhere you can see him in my profile picture.</p>
+                    <p>I love open source javascript projects. if you want you can contribute to them my github account.</p>
+                    <p>
+                        <!-- Place this tag where you want the button to render. -->
+                        <a class="github-button" href="https://github.com/giraysam" data-style="mega" data-count-href="/giraysam/followers" data-count-api="/users/giraysam#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @giraysam on GitHub">Follow @giraysam</a>
+                    </p>
                 </div>
                 <div class="right-panel col-md-6">
                     <pre>
-                        <code class="html">
-                            @requires_authorization
-def somefunc(param1='', param2=0):
-    r'''A docstring'''
-    if param1 > param2: # interesting
-        print 'Gre\'ater'
-    return (param2 - param1 + 1 + 0b10l) or None
-
-class SomeClass:
-    pass
-
->>> message = '''interpreter
-... prompt''
-                        </code> 
+                        <code class="json">
+{
+    github: "<a target="_blank" href='https://github.com/giraysam'>github.com/giraysam</a>",
+    instagram: "<a target="_blank" href='https://www.instagram.com/giraysam'>instagram.com/giraysam</a>"
+}
+                        </code>
                     </pre>
                 </div>
             </div> <!-- row -->
 
             <div class="row">
-                <div class="middle-panel col-md-6">
-                    <h2>Giray SAM</h2>
-                    Content
+                <div id="contact" class="middle-panel col-md-6">
+                    <h2>Contact</h2>
+                    Feel free to contact me. if you have any questions or just want to say "Hi."
                 </div>
                 <div class="right-panel col-md-6">
-                    <h3>Title</h3>
-                    Right
+                    <pre>
+                        <code class="json">
+{
+    email: "gry.sam@gmail.com"
+}
+                        </code>
+                    </pre>
                 </div>
             </div> <!-- row -->
 
@@ -105,7 +107,6 @@ class SomeClass:
             var menuneg = '-100%';
             var slideneg = '-80%';
 
-
             $("#slide-nav").on("click", toggler, function (e) {
 
                 var selected = $(this).hasClass('slide-active');
@@ -126,28 +127,21 @@ class SomeClass:
                     left: selected ? '0px' : slidewidth
                 });
 
-
                 $(this).toggleClass('slide-active', !selected);
                 $('#slidemenu').toggleClass('slide-active');
-
-
                 $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
-
-
             });
-
 
             var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
 
-
             $(window).on("resize", function () {
-
                 if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
                     $(selected).removeClass('slide-active');
                 }
-
-
             });
         });
     </script>
+    
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </html>
