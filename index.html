@@ -36,9 +36,9 @@
                 </div>
                 <div id="slidemenu">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="active"><a class="link" href="#about">About</a></li>
+                        <li><a class="link" href="#projects">Projects</a></li>
+                        <li><a class="link" href="#contact">Contact</a></li>
                     </ul>
                 </div> <!-- slidemenu -->
             </div>
@@ -69,6 +69,14 @@
             </div> <!-- row -->
 
             <div class="row">
+                <div id="projects" class="middle-panel col-md-6">
+                    <h2>Projects</h2>
+                    Projects will be added soon
+                </div>
+                <div class="right-panel col-md-6"></div>
+            </div> <!-- row -->
+
+            <div class="row">
                 <div id="contact" class="middle-panel col-md-6">
                     <h2>Contact</h2>
                     Feel free to contact me. if you have any questions or just want to say "Hi."
@@ -82,14 +90,6 @@
                         </code>
                     </pre>
                 </div>
-            </div> <!-- row -->
-
-            <div class="row">
-                <div id="contact" class="middle-panel col-md-6">
-                    <h2>Projects</h2>
-                    Projects will be added soon
-                </div>
-                <div class="right-panel col-md-6"></div>
             </div> <!-- row -->
 
             <div class="right-panel-background col-md-6"></div>
@@ -108,12 +108,14 @@
             var toggler = '.navbar-toggle';
             var pagewrapper = '#page-content';
             var navigationwrapper = '.navbar-header';
-            var menuwidth = '100%';
-            var slidewidth = '80%';
+            var slidewidth = '60%';
             var menuneg = '-100%';
-            var slideneg = '-80%';
+            var slideneg = '-60%';
 
             $("#slide-nav").on("click", toggler, function (e) {
+
+                $("html, body").animate({scrollTop:'0'}, 500);
+                window.location.hash = '';
 
                 var selected = $(this).hasClass('slide-active');
 
@@ -143,6 +145,41 @@
             $(window).on("resize", function () {
                 if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
                     $(selected).removeClass('slide-active');
+                }
+            });
+
+            $("a.link").on("click", function(event){
+                
+                $('#slidemenu').stop().animate({
+                    left: menuneg
+                });
+
+                $('#navbar-height-col').stop().animate({
+                    left: slideneg
+                });
+
+                $(pagewrapper).stop().animate({
+                    left: '0px'
+                });
+
+                $(navigationwrapper).stop().animate({
+                    left: '0px'
+                });
+
+                $('.navbar-toggle').toggleClass('slide-active', false);
+                $('#slidemenu').toggleClass('slide-active');
+                $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+
+                if(this.hash !== "") {
+                    event.preventDefault();
+
+                    $('#slidemenu > ul li').removeClass('active');
+                    $(this).parent('li').addClass('active');
+
+                    $("html, body").animate({scrollTop:$(this.hash).offset().top}, 500);
+
+                    //add hash to the current scroll position
+                    window.location.hash = this.hash;
                 }
             });
         });
