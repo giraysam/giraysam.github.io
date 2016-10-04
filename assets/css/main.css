@@ -137,14 +137,14 @@ code {
 	}
 	#slide-nav .navbar.slide-active {
 	    position: absolute;
-	    width: 60%;
+	    width: 40%;
 	    top: -1px;
 	    z-index: 1000;
 	}
 	#slide-nav #slidemenu {
 	    background: #f7f7f7;
 	    left: -100%;
-	    width: 60%;
+	    width: 40%;
 	    min-width: 0;
 	    position: absolute;
 	    padding-left: 0;
@@ -159,7 +159,7 @@ code {
 	}
 	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
 	    min-width: 0;
-	    width: 60%;
+	    width: 40%;
 	    white-space: normal;
 	}
 	#slide-nav {
@@ -173,8 +173,8 @@ code {
 	    top: 0;
 	    height: 100%;
       	bottom:0;
-	    width: 60%;
-	    left: -60%;
+	    width: 40%;
+	    left: -40%;
 	    background: #f7f7f7;
 	}
 	#navbar-height-col.inverse {
