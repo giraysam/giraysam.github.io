@@ -58,7 +58,7 @@
                 </div>
                 <div class="right-panel col-md-6">
                     <pre>
-                        <code class="json">
+                        <code class="js">
 {
     github: "<a target="_blank" href='https://github.com/giraysam'>github.com/giraysam</a>",
     instagram: "<a target="_blank" href='https://www.instagram.com/giraysam'>instagram.com/giraysam</a>"
@@ -68,22 +68,43 @@
                 </div>
             </div> <!-- row -->
 
-            <div class="row">
-                <div id="projects" class="middle-panel col-md-6">
+            <div id="projects" class="row">
+                <div class="middle-panel col-md-6">
                     <h2>Projects</h2>
-                    Projects will be added soon
+                    <h4>Boomerang Cache</h4>
+                    <p>
+                        BoomerangCache is a client side caching library based on localStorage and sessionStorage.
+                    </p>
+                    <p>
+                        <b>Source Code:</b>
+                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache'>https://github.com/giraysam/boomerang-cache</a><br />
+
+                        <b>Documentation:</b>
+                        <a target="_blank" href='https://giraysam.github.io/boomerang-cache/'>https://giraysam.github.io/boomerang-cache/</a><br />
+                        <b>Keywords:</b> Javascript, localStorage, sessionStorage
+                    </p>
                 </div>
-                <div class="right-panel col-md-6"></div>
+                <div class="right-panel col-md-6">
+                    <pre>
+                        <code class="js">
+/** Boomerang Cache **/
+var boomerang = BoomerangCache.create("bucket_1");
+var seconds = 3;
+boomerang.set('key', 'Hello World', seconds);
+boomerang.get('key', 'Hello World');
+                        </code>
+                    </pre>
+                </div>
             </div> <!-- row -->
 
-            <div class="row">
-                <div id="contact" class="middle-panel col-md-6">
+            <div id="contact" class="row">
+                <div class="middle-panel col-md-6">
                     <h2>Contact</h2>
                     Feel free to contact me. if you have any questions or just want to say "Hi."
                 </div>
                 <div class="right-panel col-md-6">
                     <pre>
-                        <code class="json">
+                        <code>
 {
     email: "gry.sam@gmail.com"
 }

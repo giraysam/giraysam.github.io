@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+	line-height: 25px;
 }
 /* adjust body when menu is open */
 body.slide-active {
@@ -53,6 +54,10 @@ code {
 	border-left-color: #ffffff;
 	border-width: 13px;
 	margin-top: -13px;
+}
+.middle-panel h4 {
+	padding-top: 20px;
+	color: #ff828e;
 }
 .right-panel {
     background-color: #002b36;
