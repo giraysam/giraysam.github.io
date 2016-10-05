@@ -127,9 +127,11 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('pre code').each(function(i, block) {
-                hljs.highlightBlock(block);
-            });
+            setTimeout(function () {
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+            }, 500);
 
             $('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function () {
                 $(this).animate({
