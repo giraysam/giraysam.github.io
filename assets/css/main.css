@@ -104,6 +104,11 @@ code {
 .container-fluid > .navbar-header {
 	margin-left: 0;
 }
+.navbar-brand {
+    font-family: 'Yellowtail', cursive;
+	font-size: 25px;
+	padding-top: 10px;
+}
 @media (min-width: 981px) {
     .right-panel-background {
         display: block;

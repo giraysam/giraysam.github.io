@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" />
         
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+
         <link rel="stylesheet" href="assets/css/solarized-dark.min.css" />
 
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -32,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">giray s@m</a>
+                    <a class="navbar-brand" href="#">giray sam</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -235,7 +237,7 @@ viiny.dragger(obj, {
                     $('#slidemenu > ul li').removeClass('active');
                     $(this).parent('li').addClass('active');
 
-                    $("html, body").animate({scrollTop:$(this.hash).offset().top}, 500);
+                    $("html, body").animate({scrollTop:$(this.hash).offset().top - 350}, 500);
 
                     window.location.hash = this.hash;
                 }
