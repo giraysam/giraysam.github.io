@@ -85,7 +85,7 @@
             <script type="text/template" id="tmplt-project">
                 <div class="row">
                     <div class="middle-panel col-md-6">
-                        <h4 id="boomerang-cache" ><%= project.title %></h4>
+                        <h4 id="<%= project.tag %>" ><%= project.title %></h4>
                         <p><i><%= project.description %></i></p>
                         <% if (project.source || project.minified) { %>
                             <b>Download: </b>
@@ -182,7 +182,7 @@
                     $('#bs-example-navbar-collapse-1 ul li').removeClass('active');
                     $(this).parent('li').addClass('active');
 
-                    $("html, body").animate({scrollTop:$(this.hash).offset().top - 350}, 500);
+                    $("html, body").animate({scrollTop:$(this.hash).offset().top-100}, 500);
 
                     window.location.hash = this.hash;
                 }

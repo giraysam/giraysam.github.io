@@ -1,6 +1,7 @@
 [
     {
         "title": "Boomerang Cache",
+        "tag": "boomerang-cache",
         "description": "Boomerang Cache is a client side caching library based on localStorage and sessionStorage.",
         "source": "https://github.com/giraysam/boomerang-cache/blob/master/src/boomerang-cache.js",
         "minified": "https://github.com/giraysam/boomerang-cache/blob/master/dist/boomerang-cache.min-1.0.4.js",
@@ -19,6 +20,7 @@
     },
     {
         "title": "Viiny Dragger",
+        "tag": "viiny-dragger",
         "description": "Viiny Dragger is a drag and drop plugin for javascript.",
         "source": "https://github.com/giraysam/viiny-dragger/blob/master/src/index.js",
         "minified": "https://github.com/giraysam/viiny-dragger/blob/master/dist/viiny-dragger.min.js",
