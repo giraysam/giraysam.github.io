@@ -118,7 +118,7 @@ code {
 	.navbar-collapse {
 		position: fixed;
 		left: -50%;
-		top: 0px;
+		top: 50px;
 		width: 50%;
 		background: #101010 none repeat scroll 0% 0%;
 		min-height: 100%;
