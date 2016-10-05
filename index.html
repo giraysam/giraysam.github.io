@@ -234,7 +234,7 @@ viiny.dragger(obj, {
                     event.preventDefault();
                     $('#bs-example-navbar-collapse-1').collapse('hide');
 
-                    $('#slidemenu > ul li').removeClass('active');
+                    $('#bs-example-navbar-collapse-1 ul li').removeClass('active');
                     $(this).parent('li').addClass('active');
 
                     $("html, body").animate({scrollTop:$(this.hash).offset().top - 350}, 500);
