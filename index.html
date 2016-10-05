@@ -203,15 +203,6 @@ viiny.dragger(obj, {
                 });
             });
 
-            $(window).resize(function() {
-                var thisFunction = arguments.callee;
-                clearTimeout(thisFunction.timeoutId);
-                thisFunction.timeoutId = setTimeout(function() {
-                    thisFunction.timeoutId = null; // You could leave this line out.
-                    $('#bs-example-navbar-collapse-1').collapse('hide');
-                }, 300);
-            });
-
             $("a.link").on("click", function(event){
                 
                 if(this.hash !== "") {
