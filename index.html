@@ -86,7 +86,35 @@
                 <div class="row">
                     <div class="middle-panel col-md-6">
                         <h4 id="boomerang-cache" ><%= project.title %></h4>
-                        <%= project.description.join('\n') %>
+                        <p><i><%= project.description %></i></p>
+                        <% if (project.source || project.minified) { %>
+                            <b>Download: </b>
+                            <% if (project.source) { %>
+                            <a target="_blank" href="<%=project.source%>">Source</a>
+                            <% } %>
+
+                            <% if (project.minified) { %>
+                            - <a target="_blank" href="<%=project.minified%>">Minified</a>
+                            <% } %>
+                            <br />
+                        <%} %>
+
+                        <% if (project.github) { %>
+                        <b>Follow the project on </b> <a target="_blank" href="<%=project.github%>">Github project page</a>
+                        or <a target="_blank" href="<%=project.github %>/issues">report a bug</a>
+                        <br />
+                        <% } %>
+
+                        <% if (project.doc) { %>
+                        <b>View </b> <a target="_blank" href="<%=project.doc%>">Full documentation</a>
+                        <br />
+                        <% } %>
+
+                        <% if (project.keywords) { %>
+                        <b>Keywords </b> <%=project.keywords%>
+                        <br />
+                        <% } %>
+                        
                     </div>
                     <div class="right-panel col-md-6">
                         <%= project.codes.join('\n') %>
