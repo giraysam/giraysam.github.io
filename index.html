@@ -18,11 +18,6 @@
 
         <link rel="stylesheet" href="assets/css/main.css" />
         
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="assets/js/highlight.pack.js" type="text/javascript"></script>
-        <script src="assets/js/jquery-2.2.4.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -78,89 +73,26 @@
 
             <hr />
 
-            <!-- Boomerang Cache Start -->
             <div class="row">
-                <div class="middle-panel col-md-6">
+                <div class="col-md-12">
                     <h2>Projects</h2>
-                    
-                    <h4 id="boomerang-cache" >Boomerang Cache</h4>
-                    <p>
-                        Boomerang Cache is a client side caching library based on localStorage and sessionStorage.<br />
-                        <a target="_blank" href="https://www.npmjs.org/package/boomerang-cache">
-                            <img src="https://img.shields.io/npm/v/boomerang-cache.svg?style=flat-square" alt="npm version" />
-                        </a>
-                        <a target="_blank" href="https://travis-ci.org/giraysam/boomerang-cache">
-                            <img src="https://travis-ci.org/giraysam/boomerang-cache.svg?branch=master" alt="travis" />
-                        </a>
-                    </p>
-                    <p>
-                        <b>Download:</b>
-                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache/blob/master/src/boomerang-cache.js'>Source</a>,
-                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache/blob/master/dist/boomerang-cache.min-1.0.4.js'>Minified</a>
-                        <br />
-                        <b>Follow the project on</b>
-                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache'>Github project page</a> or 
-                        <a target="_blank" href='https://github.com/giraysam/boomerang-cache/issues'>report a bug</a><br />
-
-                        <b>View</b> <a target="_blank" href='https://giraysam.github.io/boomerang-cache/'>Full Documentation</a><br />
-                        <b>Keywords:</b> Javascript, localStorage, sessionStorage
-                    </p>
                 </div>
-                <div class="right-panel col-md-6">
-                    <pre>
-                        <code class="js">
-// Usage
-var boomerang = BoomerangCache.create("bucket_1");
-var seconds = 3;
-boomerang.set('key', 'Hello World', seconds);
-boomerang.get('key', 'Hello World');
-                        </code>
-                    </pre>
-                </div>
-            </div> <!-- row -->
-            <!-- Boomerang Cache End -->
-
-            <!-- Viiny Dragger Start -->
-            <div class="row">
-                <div class="middle-panel col-md-6">
-                    <h4 id="viiny-dragger" >Viiny Dragger</h4>
-                    <p>
-                        Viiny Dragger is a drag and drop plugin for javascript.
-                    </p>
-                    <p>
-                        <b>Download:</b>
-                        <a target="_blank" href='https://github.com/giraysam/viiny-dragger/blob/master/src/index.js'>Source</a>,
-                        <a target="_blank" href='https://github.com/giraysam/viiny-dragger/blob/master/dist/viiny-dragger.min.js'>Minified</a>
-                        <br />
-                        <b>Follow the project on</b>
-                        <a target="_blank" href='https://github.com/giraysam/viiny-dragger'>Github project page</a> or 
-                        <a target="_blank" href='https://github.com/giraysam/viiny-dragger/issues'>report a bug</a><br />
-
-                        <b>View</b> <a target="_blank" href='http://giraysam.github.io/viiny-dragger'>Full Documentation</a><br />
-                        <b>Keywords:</b> Javascript, Drag and Drop
-                    </p>
-                </div>
-                <div class="right-panel col-md-6">
-                    <pre>
-                        <code class="js">
-// Dragging
-var obj = document.getElementById('drag-1');
-viiny.dragger(obj);
-
-// Snapping
-var obj = document.getElementById('drag-1');
-viiny.dragger(obj, {
-    snapX: 50,
-    snapY: 50
-});
-
-// it has Axis, Callbacks, Restriction features...
-
-                        </code>
-                    </pre>
-                </div>
-            </div> <!-- row -->
-            <!-- Viiny Dragger End -->
+            </div>
+            
+            <div id="projects-container">
+            </div>
+            
+            <script type="text/template" id="tmplt-project">
+                <div class="row">
+                    <div class="middle-panel col-md-6">
+                        <h4 id="boomerang-cache" ><%= project.title %></h4>
+                        <%= project.description.join('\n') %>
+                    </div>
+                    <div class="right-panel col-md-6">
+                        <%= project.codes.join('\n') %>
+                    </div>
+                </div> <!-- row -->
+            </script>
 
             <hr />
 
@@ -184,6 +116,14 @@ viiny.dragger(obj, {
             <div class="right-panel-background col-md-6"></div>
         </div> <!-- container-fluid -->
     </body>
+    
+    <script src="assets/js/highlight.pack.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-2.2.4.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/underscore-min.js" type="text/javascript"></script>
+    <script src="assets/js/backbone-min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -219,6 +159,4 @@ viiny.dragger(obj, {
             });
         });
     </script>
-    
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </html>
